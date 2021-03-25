@@ -3,8 +3,9 @@ const router = express.Router()
 const adminController = require('../controller/admincontroller')
 const passport = require('passport')
 
+router.get('/',adminController.getIndex);
 
-router.get('/', adminController.getHome);
+router.get('/blogs', adminController.getHome);
 
 router.get('/compose',adminController.getCompose)
 

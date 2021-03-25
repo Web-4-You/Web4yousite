@@ -14,6 +14,10 @@ const deleteFile = (filepath) => {
 }
 
 
+exports.getIndex = (req,res,next) => {
+  res.render("index");
+}
+
 
 exports.getHome = (req,res,next) => {
     Post.find({}, function(err, posts){

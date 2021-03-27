@@ -22,7 +22,8 @@ exports.getIndex = (req,res,next) => {
 exports.getHome = (req,res,next) => {
     Post.find({}, function(err, posts){
         console.log(posts);
-        res.render("home", {
+
+        res.render("loggedout", {
           posts: posts,
           user : req.user
           });
